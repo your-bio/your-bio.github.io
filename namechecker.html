@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+window.onload = () => {
+var request = new XMLHttpRequest();  
+request.open('GET', 'http://yourb.io/o', true);
+request.onreadystatechange = function() {
+
+    if (request.readyState === 4){
+    	alert("Page already exists.");
+    };
+    
+    if (request.status === 404) {  
+        alert("Success, this page does not exist!");
+    };
+};
+request.send();
+};
+</script>
+</body>
+</html>
